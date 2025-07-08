@@ -1,607 +1,420 @@
-<html id="topo"><head>
-    <meta charset="UTF-8">
-    <title>Fatec São Paulo</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/style61.css">
-    <link rel="stylesheet" href="./css/menus1.css">
-    <link rel="stylesheet" href="./css/especial.css">
-    <link rel="stylesheet" href="./css/mensagens1.css"> <!--*** Se houver mensagens na Home. -->
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:image" content="https://www.fatecsp.br/img/logo_fatec_sp_colorido_grd_adjusted.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:title" content="Site da Fatec São Paulo">
-    <meta property="og:description" content="Mais de 50 anos de excelência formando tecnólogos. Ensino Superior Gratuito de qualidade.">
-    <meta property="og:url" content="https://www.fatecsp.br">
-    <meta property="og:type" content="website">
- </head>
- <body tabindex="0"> 
-  <!-- tabIndex para os dispositivos touch. -->   
-  <div id="container">  
-   <header class="header">  
-     <!-- Logos --> 
-     <div id="logos_titulo">
-        <div class="flex_center">
-            <div>
-              <a href="http://www.cps.sp.gov.br/" target="_blank">
-                <img src="./img/cps.png" alt="Centro Paula Souza" width="80">
-              </a>
-            </div>
-            <div id="fatec">
-              <a href="#">
-                <img class="logo" src="./img/logofatec.png" alt="Fatec São Paulo" width="100">
-              </a>
-            </div>
-            <div>    
-              <a href="https://www.saopaulo.sp.gov.br/" target="_blank">
-                <img class="logo" src="./img/brasao_sp.jpg" alt="Governo do Estado de São Paulo" width="110">  
-              </a>
-            </div>    
-        </div>
-        <!-- Título Principal --> 
-        <!--<h1 class="titulo1">FACULDADE DE TECNOLOGIA DE SÃO PAULO</h1>-->
-     </div>
-
-     <!-- Midias Sociais e outros -->
-     <div id="row2"> 
-       <div id="social"> 
-          <ul class="icones">
-            <li> 
-			        <figure>
-				          <a href="https://www.facebook.com/fatecspoficial" target="_blank">
-                    <img src="./img/facebook.png" alt="Facebook" title="Facebook">
-                  </a>
-		          </figure>
-		        </li>
-            <li>
-			        <figure>
-				          <a href="https://www.youtube.com/user/FatecSPOficial" target="_blank">
-                    <img src="./img/youtube.png" alt="Youtube" title="Youtube">
-                  </a>
-		          </figure>
-		        </li>
-            <li>
-			        <figure>
-				        <a href="https://www.instagram.com/fatecsp/" target="_blank">
-                  <img src="./img/instagram.png" alt="Instagram" title="Instagram">
-                </a>
-		          </figure>
-            </li> 
-            <li>
-              <figure>
-                <a href="http://www.linkedin.com/school/faculdade-de-tecnologia-de-s%C3%A3o-paulo-fatec-sp/" target="_blank">
-                <img src="./img/linkedin.png" alt="Linkedin" title="Linkedin"></a>
-              </figure>
-            </li> 
-            <li class="mail">
-              <figure>
-                <a><img src="./img/webmail.png" alt="WebMail" title="WebMail"></a>
-              </figure>
-              <ul id="sub_mail">  
-                <li><a href="http://webmail.fatecsp.br/" target="_blank">@fatecsp.br</a></li>
-                <li><a href="./paginas/email_gov.php#conteudo" target="_self">@fatec.sp.GOV.br</a></li>      
-              </ul>
-            </li>  
-            <li>  
-				        <a href="#calendario">
-                  <figure>
-                   <img src="./img/calendario.png" alt="Calendário" title="Calendário">
-		              </figure>
-                </a>    
-            </li>   
-		      </ul>
-       </div> 
-       <!-- Lupa, Botão Destaques e Botão Login. -->     
-      <div id="dest_log_pesq">  
-        <span id="pesquisar">
-           <a href="./paginas/pesquisar_google.php">
-              <img src="./img/lupa1.png" alt="Pesquisar" title="Pesquisar" width="27px">
-           </a>
-        </span>
-        <!--span id="bt_destaques"> 
-           <a href="./index.php#conteudo">Destaques</a>
-        </span-->
-        <span id="bt_login">           
-        <a href="./paginas/login_new.php">Login</a> 
-        </span>  
-      </div> 
-    </div>
-
-     <!-- Menu curto -->  
-     <div id="row0_links" aria-haspopup="true">  
-        <ul class="row_links">  
-          <li><a href="./index.php">HOME&nbsp;</a></li>      
-          <li><a href="./paginas/cursos.php" title="Clique no link e acesse todos cursos...">CURSOS</a></li>
-          <li class="siga"><a>VESTIBULAR</a>
-		     <ul id="submenu_siga">
-               <li><a href="https://vestibular.fatec.sp.gov.br/" target="_blank">SITE</a></li> 
-               <li><a href="https://siga.cps.sp.gov.br/matricula/matricularemota.aspx" target="_blank">MATRÍCULA REMOTA</a></li> 
-             </ul>
-          </li>		  
-		  
-          <li class="siga"><a>SIGA - ALUNO 🎓</a>
-             <ul id="submenu_siga">  
-               <li><a href="https://siga.cps.sp.gov.br/sigaaluno/applogin.aspx" target="_blank">ACESSO | LOGIN</a></li>
-               <li><a href="./paginas/siga_alunos.php">TUTORIAIS (ALUNOS)</a></li>       
-             </ul>
-          </li>
-
-          <li class="siga"><a>SIGA - PROFESSOR 📚</a>
-             <ul id="submenu_siga">  
-               <li><a href="https://siga.cps.sp.gov.br/fatec/login.aspx" target="_blank">ACESSO | LOGIN</a></li>  
-               <li><a href="./paginas/siga.php">TUTORIAIS (DOCENTES | FUNCIONÁRIOS)</a></li>       
-             </ul>
-          </li>
-          <!-- <li><a href="http://san.fatecsp.br/" target="_blank">SAN</a></li>     -->
-          <!-- <li><a href="./paginas/internet.php">INTERNET</a></li>      -->
-        </ul>
-     </div>      
- 
-     <!-- ****** Menu Principal *******  -->    
-      
-	 <div id="row1">  
-       <nav id="nav_menu" aria-haspopup="true">  
-         <span class="menu_icon" onclick="void(0);" style="height: 20px;">
-         <!-- imagem do ícone 'burger' no arquivo 'css/menu1.css'. -->
-         </span>
-        <ul class="menu_princ" aria-haspopup="true" style="display: none;"> 
-            <!--<li id="bt_fechar">&#10005; <span class="fechar">Fechar</span></li> -->
-            <li><a>Institucional</a>
-            <ul class="submenu_princ">
-                  <li><a href="./paginas/a_fatecsp.php">Quem Somos</a></li>
-                  <li><a href="./fatec50anos.php">FATEC-SP 50 Anos</a></li>
-                  <li><a href="./paginas/hierarquia.php">Hierarquia</a></li>
-                  <li><a href="./paginas/congregacao.php">Congregação / Atas</a></li>
-                  <li><a href="./paginas/administrativo.php">Administrativo</a></li>
-                  <li><a href="./paginas/legislacao.php">Legislação</a></li> 
-                  <li><a href="./paginas/cpa.php">Sistemas de Avaliação <br>Institucional</a></li>
-                  <!--li><a href="./paginas/ouvidoria.php">Ouvidoria</a></li--> 
-                  <li><a href="https://cipafatecsp.wixsite.com/cipa-2" target="_blank">CIPA</a></li>
-                  <li><a href="./paginas/sites_externos.php">Sites externos</a></li>  
-	         </ul>
-            </li> 
-			<li><a>Acadêmico</a>
-			  <ul class="submenu_princ"> 
-                  <li><a href="./paginas/biblioteca.php">Biblioteca</a></li>
-                  <li><a href="./paginas/secretaria.php">Secretaria</a></li>
-                  <li><a href="./paginas/CalendarioEscolar.pdf" target="_blank">Calendário Escolar</a></li>
-                  <li><a href="./paginas/alunos_documentos.php#conteudo">Solicitação de Documentos</a></li>
-                  <li><a href="./paginas/alunos.php">Alunos</a></li>
-                  <li><a href="./paginas/docentes_new.php">Docentes</a></li>
-                  <li><a href="./paginas/departamentos.php">Departamentos e<br>&nbsp;&nbsp;Coordenadorias</a></li>
-                  <!--<li><a href="./paginas/sistemas.php">Sistemas de Gestão</a></li>-->
-	          </ul>
-			</li>
-            <li><a>Pós Graduação</a> 
-			   <ul class="submenu_princ"> 
-                  <li><a href="https://sites.google.com/view/secaoposfatec/home" target="_blank">Lato Sensu</a></li>
-                  <li><a href="http://www.pos.cps.sp.gov.br/" target="_blank">Mestrado</a></li>   
-			   </ul>	
-			</li>   
-			<li><a>Pesquisas</a>
-                <ul class="submenu_princ"> 
-                  <li><a href="./paginas/pesquisas.php">Pesquisas e Inovação</a></li>
-                  <li><a href="./paginas/pibic_cnpq.php">PIBIC/CNPQ</a></li>   
-			   </ul>	
-			</li>   
-            <li><a href="./paginas/eventos.php">Eventos</a>
-                <!--<ul class="submenu_princ"> 
-                  <li><a href="./paginas/eventos.php">Eventos Magnos</a></li>
-                  <li><a href="./paginas/eventos_outros.php">Eventos Diversos</a></li>   
-			   </ul>-->	
-			</li>   
-            <li><a>Editais</a> 
-			   <ul class="submenu_princ">
-                  <li><a href="./paginas/concursos.php">Concursos</a></li>
-                  <li><a href="./paginas/processo_seletivo.php">Processo Seletivo</a></li>
-                  <li><a href="https://urhsistemas.cps.sp.gov.br/dgsdad/SelecaoPublica/" target="_blank">Concursos CPS</a></li>
-                  <li><a href="http://cesu.cps.sp.gov.br/editaisabertos" target="_blank">Ampliação de Carga<br>Horária Docente</a></li>   
-			   </ul>	
-			</li>  
-            <li><a href="./paginas/atividades.php">+Atividades</a></li>    
-            <li><a>Oportunidades</a>
-            <ul class="submenu_princ">
-            <li><a href="https://carreiras.cps.sp.gov.br/" target="_blank">CPS Carreiras</a></li>
-            <li><a href="https://sites.google.com/view/fatecsp-estagios/" target="_blank">Estágios</a></li>
-            </ul>
-            </li>
-            <li><a href="./paginas/fale_conosco.php">Fale Conosco</a></li>
-            		 </ul>
-       </nav>
-  </div> 
-
-     <div id="tit_princ">    
-        <h1 id="titulo1">FACULDADE DE TECNOLOGIA DE SÃO PAULO</h1>
-     </div>
-          
-
-     <!-- Âncora para ir ao início do 'body'. Usar "topo" da tag <html> para ir ao topo da página. --> 
-     <div id="inicio"></div>    
-  </header>  
-      
-<!-- *** FINAL DO CABEÇALHO *** -->   
-
-      
-  <!-- IMAGEM INDIVIDUAL DA HOME (para alternar as imagens, acesse o arquivo: home.js). --> 
-  <div id="imagem" class="banner_home">
-    <figure class="img_home etiqueta" style="background-image: url('img/fatec_alunos.jpg');">
-      <!--a id="seta" href="#conteudo">
-        <img src="./img/seta_anim_down.gif" />
-        <p class="scroll_msg">Rolar a imagem...</p>
-      </a-->
-      <!--<div>
-        <a href="fatec50anos.php">
-          <img src="./img/fatec_sp50_transp4.png" title="">
-        </a>
-      </div>-->
-    </figure>
-     <!-- Estilos no arquivo mensagens1.css -->
-     <div id="manchete">
-         <a id="texto" href="./paginas/cursos.php#conteudo"> 
-           <!-- Até 53 carateres se letras Maiúsculas, caso contrário, 60. -->
-            <p style="color: #ecffb3;">📚 Ensino Superior Gratuito de Qualidade
-           </p>
-        </a>
-        <a href="#conteudo">
-              <div id="mais"><img src="./img/seta_red1.png" alt="Rolar a Página..."></div>
-           </a>
-     </div>    
-  </div> 
-
-      
-  <!-- MENU INDIVIDUAL DA PÁGINA. -->  
-  <div id="div_menu">  
-     <ul class="menu_pagina">
-          <li class="home_menu"><a href="#conteudo">Destaques</a></li>
-          <li><a href="#noticias">Mais Notícias</a></li>
-          <li><a href="#calendario">Calendário Escolar</a></li>
-          <li><a href="#diversos" target="_self">Informativos Fatec-SP</a></li>	
-     </ul>
-  </div>       
-  
-<h2 id="slogan_header"><a>FATEC-SP - EXCELÊNCIA NA FORMAÇÃO DE TECNÓLOGOS</a></h2>
-<!-- Avisos (com links), melhor até 3 chamadas curtas).. Descomentar div para utilizar -->
-<div id="barra_azul">
-  <!--<div id="slogan_link">-->
-      <!--<a href="https://inova.cps.sp.gov.br/inscricao-escola-de-inovadores-18/" target="_blank">💡🧑‍💻18ª edição do curso Escola de Inovadores - Conquiste sua Certificação Inova!</a>-->
-      <!--a href="https://www.fatecsp.br/destaques.php?not=1556" target="_blank">&#9888;&#65039;&#128231;COMUNICADO: Bloqueio de acesso à e-mails Institucionais (@FATEC.SP.GOV.BR)</a-->
-      <!--a href="#" target="_blank">3 - Avisos importantes, avisos importantes, avisos importantes!</a-->
-  <!--</div>--> 
+<html lang="pt-BR" prefix="og: http://ogp.me/ns#" class="js"><!--<![endif]--><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="profile" href="https://gmpg.org/xfn/11">
+<link rel="pingback" href="https://www.testedeperformance.com/xmlrpc.php">
+<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-0E14TJRCTJ&amp;cx=c&amp;gtm=457e5770za200&amp;tag_exp=101509157~103116026~103200004~103233427~103351869~103351871~104684208~104684211~104718208~104839054~104839056~104885889~104885891"></script><script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<title>Teste de Performance - Melhore o desempenho do seu site</title>
+<!-- This site is optimized with the Yoast SEO plugin v11.1.1 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Teste gratuitamente a velocidade do seu site, o tamanho dos arquivos e obtenha informações valiosas sobre o servidor, SEO e tempo de resposta.">
+<link rel="canonical" href="https://www.testedeperformance.com/">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Teste de Performance - Melhore o desempenho do seu site">
+<meta property="og:description" content="Teste gratuitamente a velocidade do seu site, o tamanho dos arquivos e obtenha informações valiosas sobre o servidor, SEO e tempo de resposta.">
+<meta property="og:url" content="https://www.testedeperformance.com/">
+<meta property="og:site_name" content="Teste de Performance">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Teste gratuitamente a velocidade do seu site, o tamanho dos arquivos e obtenha informações valiosas sobre o servidor, SEO e tempo de resposta.">
+<meta name="twitter:title" content="Teste de Performance - Melhore o desempenho do seu site">
+<script type="application/ld+json" class="yoast-schema-graph yoast-schema-graph--main">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.testedeperformance.com/#organization","name":"Teste de Performance","url":"https://www.testedeperformance.com/","sameAs":[]},{"@type":"WebSite","@id":"https://www.testedeperformance.com/#website","url":"https://www.testedeperformance.com/","name":"Teste de Performance","publisher":{"@id":"https://www.testedeperformance.com/#organization"},"potentialAction":{"@type":"SearchAction","target":"https://www.testedeperformance.com/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"https://www.testedeperformance.com/#webpage","url":"https://www.testedeperformance.com/","inLanguage":"pt-BR","name":"Teste de Performance - Melhore o desempenho do seu site","isPartOf":{"@id":"https://www.testedeperformance.com/#website"},"about":{"@id":"https://www.testedeperformance.com/#organization"},"datePublished":"2018-12-20T10:46:28+00:00","dateModified":"2019-06-12T18:57:54+00:00","description":"Teste gratuitamente a velocidade do seu site, o tamanho dos arquivos e obtenha informa\u00e7\u00f5es valiosas sobre o servidor, SEO e tempo de resposta."}]}</script>
+<!-- / Yoast SEO plugin. -->
+<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="Feed para Teste de Performance »" href="https://www.testedeperformance.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Feed de comentários para Teste de Performance »" href="https://www.testedeperformance.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Feed de comentários para Teste de Performance » Teste de Performance – Melhore o desempenho do seu site" href="https://www.testedeperformance.com/pagina-inicial/feed/">
+<!-- <link rel='stylesheet' id='wp-block-library-css'  href='https://www.testedeperformance.com/wp-includes/css/dist/block-library/style.min.css?ver=5.1.1' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='flatsome-icons-css'  href='https://www.testedeperformance.com/wp-content/themes/flatsome/assets/css/fl-icons.css?ver=3.3' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='flatsome-main-css'  href='https://www.testedeperformance.com/wp-content/themes/flatsome/assets/css/flatsome.css?ver=3.6.1' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='flatsome-style-css'  href='https://www.testedeperformance.com/wp-content/themes/teste-de-performance-flatsome-child/style.css?ver=3.0' type='text/css' media='all' /> -->
+<link rel="stylesheet" type="text/css" href="//www.testedeperformance.com/wp-content/cache/wpfc-minified/q5n1jgvv/a4l14.css" media="all">
+<script>if (document.location.protocol != "https:") {document.location = document.URL.replace(/^http:/i, "https:");}</script><script src="//www.testedeperformance.com/wp-content/cache/wpfc-minified/dfz3a5pw/a4l14.js" type="text/javascript"></script>
+<!-- <script type='text/javascript' src='https://www.testedeperformance.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script> -->
+<!-- <script type='text/javascript' src='https://www.testedeperformance.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script> -->
+<link rel="https://api.w.org/" href="https://www.testedeperformance.com/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.testedeperformance.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.testedeperformance.com/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 5.1.1">
+<link rel="shortlink" href="https://www.testedeperformance.com/">
+<link rel="alternate" type="application/json+oembed" href="https://www.testedeperformance.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.testedeperformance.com%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://www.testedeperformance.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.testedeperformance.com%2F&amp;format=xml">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-73712942-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-73712942-1');
+</script>
+<style>
+.planos h4 {
+font-size: 2.3em
+}
+</style><style>.bg{opacity: 0; transition: opacity 1s; -webkit-transition: opacity 1s;} .bg-loaded{opacity: 1;}</style><!--[if IE]><link rel="stylesheet" type="text/css" href="https://www.testedeperformance.com/wp-content/themes/flatsome/assets/css/ie-fallback.css"><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"></script><script>var head = document.getElementsByTagName('head')[0],style = document.createElement('style');style.type = 'text/css';style.styleSheet.cssText = ':before,:after{content:none !important';head.appendChild(style);setTimeout(function(){head.removeChild(style);}, 0);</script><script src="https://www.testedeperformance.com/wp-content/themes/flatsome/assets/libs/ie-flexibility.js"></script><![endif]--><style id="custom-css" type="text/css">:root {--primary-color: #0297e5;}/* Site Width */.header-main{height: 155px}#logo img{max-height: 155px}#logo{width:200px;}.header-top{min-height: 30px}.has-transparent + .page-title:first-of-type,.has-transparent + #main > .page-title,.has-transparent + #main > div > .page-title,.has-transparent + #main .page-header-wrapper:first-of-type .page-title{padding-top: 155px;}.header.show-on-scroll,.stuck .header-main{height:70px!important}.stuck #logo img{max-height: 70px!important}.header-bottom {background-color: #f1f1f1}.header-main .nav > li > a{line-height: 2px }.stuck .header-main .nav > li > a{line-height: 50px }@media (max-width: 549px) {.header-main{height: 70px}#logo img{max-height: 70px}}/* Color */.accordion-title.active, .has-icon-bg .icon .icon-inner,.logo a, .primary.is-underline, .primary.is-link, .badge-outline .badge-inner, .nav-outline > li.active> a,.nav-outline >li.active > a, .cart-icon strong,[data-color='primary'], .is-outline.primary{color: #0297e5;}/* Color !important */[data-text-color="primary"]{color: #0297e5!important;}/* Background */.scroll-to-bullets a,.featured-title, .label-new.menu-item > a:after, .nav-pagination > li > .current,.nav-pagination > li > span:hover,.nav-pagination > li > a:hover,.has-hover:hover .badge-outline .badge-inner,button[type="submit"], .button.wc-forward:not(.checkout):not(.checkout-button), .button.submit-button, .button.primary:not(.is-outline),.featured-table .title,.is-outline:hover, .has-icon:hover .icon-label,.nav-dropdown-bold .nav-column li > a:hover, .nav-dropdown.nav-dropdown-bold > li > a:hover, .nav-dropdown-bold.dark .nav-column li > a:hover, .nav-dropdown.nav-dropdown-bold.dark > li > a:hover, .is-outline:hover, .tagcloud a:hover,.grid-tools a, input[type='submit']:not(.is-form), .box-badge:hover .box-text, input.button.alt,.nav-box > li > a:hover,.nav-box > li.active > a,.nav-pills > li.active > a ,.current-dropdown .cart-icon strong, .cart-icon:hover strong, .nav-line-bottom > li > a:before, .nav-line-grow > li > a:before, .nav-line > li > a:before,.banner, .header-top, .slider-nav-circle .flickity-prev-next-button:hover svg, .slider-nav-circle .flickity-prev-next-button:hover .arrow, .primary.is-outline:hover, .button.primary:not(.is-outline), input[type='submit'].primary, input[type='submit'].primary, input[type='reset'].button, input[type='button'].primary, .badge-inner{background-color: #0297e5;}/* Border */.nav-vertical.nav-tabs > li.active > a,.scroll-to-bullets a.active,.nav-pagination > li > .current,.nav-pagination > li > span:hover,.nav-pagination > li > a:hover,.has-hover:hover .badge-outline .badge-inner,.accordion-title.active,.featured-table,.is-outline:hover, .tagcloud a:hover,blockquote, .has-border, .cart-icon strong:after,.cart-icon strong,.blockUI:before, .processing:before,.loading-spin, .slider-nav-circle .flickity-prev-next-button:hover svg, .slider-nav-circle .flickity-prev-next-button:hover .arrow, .primary.is-outline:hover{border-color: #0297e5}.nav-tabs > li.active > a{border-top-color: #0297e5}.widget_shopping_cart_content .blockUI.blockOverlay:before { border-left-color: #0297e5 }.woocommerce-checkout-review-order .blockUI.blockOverlay:before { border-left-color: #0297e5 }/* Fill */.slider .flickity-prev-next-button:hover svg,.slider .flickity-prev-next-button:hover .arrow{fill: #0297e5;}body{font-size: 100%;}@media screen and (max-width: 549px){body{font-size: 100%;}}body{font-family:"Lato", sans-serif}body{font-weight: 700}body{color: #000000}.nav > li > a {font-family:"Lato", sans-serif;}.nav > li > a {font-weight: 700;}h1,h2,h3,h4,h5,h6,.heading-font, .off-canvas-center .nav-sidebar.nav-vertical > li > a{font-family: "Lato", sans-serif;}h1,h2,h3,h4,h5,h6,.heading-font,.banner h1,.banner h2{font-weight: 700;}h1,h2,h3,h4,h5,h6,.heading-font{color: #000000;}.alt-font{font-family: "Dancing Script", sans-serif;}.alt-font{font-weight: 700!important;}a{color: #0297e5;}.absolute-footer, html{background-color: #ffffff}.label-new.menu-item > a:after{content:"Novo";}.label-hot.menu-item > a:after{content:"Quente";}.label-sale.menu-item > a:after{content:"Promoção";}.label-popular.menu-item > a:after{content:"Popular";}</style>
+</head>
+<body data-rsssl="1" class="home page-template page-template-page-blank page-template-page-blank-php page page-id-2 lightbox nav-dropdown-has-arrow">
+<a class="skip-link screen-reader-text" href="#main">Skip to content</a>
+<div id="wrapper">
+<header id="header" class="header ">
+<div class="header-wrapper">
+<div id="masthead" class="header-main hide-for-sticky">
+<div class="header-inner flex-row container logo-left" role="navigation">
+<!-- Logo -->
+<div id="logo" class="flex-col logo">
+<!-- Header logo -->
+<a href="https://www.testedeperformance.com/" title="Teste de Performance - Deixe seu site mais rápido começando por um teste de velocidade" rel="home">
+<img width="200" height="155" src="https://www.testedeperformance.com/wp-content/uploads/2018/12/logo.svg" class="header_logo header-logo" alt="Teste de Performance"><img width="200" height="155" src="https://www.testedeperformance.com/wp-content/uploads/2018/12/logo.svg" class="header-logo-dark" alt="Teste de Performance"></a>
+</div>
+<!-- Mobile Left Elements -->
+<div class="flex-col show-for-medium flex-left">
+<ul class="mobile-nav nav nav-left ">
+</ul>
+</div>
+<!-- Left Elements -->
+<div class="flex-col hide-for-medium flex-left
+flex-grow">
+<ul class="header-nav header-nav-main nav nav-left  nav-spacing-xlarge nav-uppercase">
+</ul>
+</div>
+<!-- Right Elements -->
+<div class="flex-col hide-for-medium flex-right">
+<ul class="header-nav header-nav-main nav nav-right  nav-spacing-xlarge nav-uppercase">
+<li id="menu-item-245" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2 current_page_item active  menu-item-245"><a href="https://www.testedeperformance.com/" class="nav-top-link">Produto</a></li>
+<li id="menu-item-14" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-14"><a href="https://www.testedeperformance.com/planos-e-precos/" class="nav-top-link">Planos e Preços</a></li>
+<li id="menu-item-16" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-16"><a href="http://pro.testedeperformance.com/login" class="nav-top-link">Entrar</a></li>
+<li id="menu-item-17" class="button destaque menu-item menu-item-type-custom menu-item-object-custom  menu-item-17"><a href="http://pro.testedeperformance.com/register" class="nav-top-link">Experimente grátis</a></li>
+</ul>
+</div>
+<!-- Mobile Right Elements -->
+<div class="flex-col show-for-medium flex-right">
+<ul class="mobile-nav nav nav-right ">
+<li class="nav-icon has-icon">
+<a href="#" data-open="#main-menu" data-pos="center" data-bg="main-menu-overlay" data-color="" class="is-small" aria-controls="main-menu" aria-expanded="false">
+<i class="icon-menu"></i>
+</a>
+</li>            </ul>
+</div>
+</div><!-- .header-inner -->
+</div><!-- .header-main -->
+<div class="header-bg-container fill"><div class="header-bg-image fill"></div><div class="header-bg-color fill"></div></div><!-- .header-bg-container -->   </div><!-- header-wrapper-->
+</header>
+<main id="main" class="">
+<div id="content" role="main" class="content-area">
+<section class="section banner-home dark has-parallax" id="section_1121301796">
+<div class="bg section-bg fill bg-fill parallax-active bg-loaded" data-parallax-container=".section" data-parallax-background="" data-parallax="-4" style="height: 784px; transform: translate3d(0px, -39px, 0px); backface-visibility: hidden;">
+</div><!-- .section-bg -->
+<div class="section-content relative">
+<div class="row align-center" id="row-1504991885">
+<div class="col medium-10 small-12 large-10"><div class="col-inner">
+<div class="row row-collapse" id="row-767165705">
+<div class="col medium-8 small-12 large-8"><div class="col-inner">
+<h1>Teste gratuitamente a performance do seu site</h1>
+</div></div>
+<div class="col medium-7 small-12 large-7"><div class="col-inner">
+<h2>Descubra se o seu site está lento e receba dicas de como otimizá-lo em poucos passos</h2>
+</div></div>
+<div class="col small-12 large-12"><div class="col-inner">
+<div class="row">
+<div class="col small-12 medium-12 large-12">
+<form class="form-top" id="form1" action="https://app.testedeperformance.com/action/request/addRequest" method="post">
+<!--<select>        
+<option value="http://">http://</option>
+<option value="https://">https://</option>
+</select>-->     
+<div class="box">              
+<input type="text" id="url" name="input-url" placeholder="www.seusite.com.br">
+</div>
+<button class="submit" id="submit">Testar agora</button>
+</form>
+</div>
+</div>
+</div></div>
+<style scope="scope">
+</style>
+</div>
+</div></div>
+<style scope="scope">
+</style>
+</div>
+</div><!-- .section-content -->
+<style scope="scope">
+#section_1121301796 {
+padding-top: 0px;
+padding-bottom: 0px;
+background-color: #0297e5;
+}
+#section_1121301796 .section-bg.bg-loaded {
+background-image: url(https://www.testedeperformance.com/wp-content/uploads/2019/05/bgperformance-1.jpg);
+}
+</style>
+</section>
+<div class="is-divider divider clearfix"></div><!-- .divider -->
+<section class="section" id="section_768610880">
+<div class="bg section-bg fill bg-fill  bg-loaded">
+</div><!-- .section-bg -->
+<div class="section-content relative">
+<div class="row align-middle" id="row-494725847">
+<div class="col small-12 large-12"><div class="col-inner">
+<h2 style="text-align: center;">Monitore seu site automaticamente e<br>
+obtenha informações valiosas em tempo real</h2>
+<p style="text-align: center; font-size: 1.1em;">A versão PRO da nossa ferramenta controla o desempenho do seu site<br>
+minuto a minuto em um painel extremamente fácil de entender</p>
+<div class="is-divider divider clearfix"></div><!-- .divider -->
+</div></div>
+<div class="col medium-6 small-12 large-6"><div class="col-inner">
+<div class="img has-hover x md-x lg-x y md-y lg-y" id="image_334729013">
+<div class="img-inner dark" style="margin:0px 0px 80px 0px;">
+<img width="1001" height="604" src="https://www.testedeperformance.com/wp-content/uploads/2018/12/lista-sites-testeperformance.png" class="attachment-original size-original" alt="" srcset="https://www.testedeperformance.com/wp-content/uploads/2018/12/lista-sites-testeperformance.png 1001w, https://www.testedeperformance.com/wp-content/uploads/2018/12/lista-sites-testeperformance-300x181.png 300w, https://www.testedeperformance.com/wp-content/uploads/2018/12/lista-sites-testeperformance-768x463.png 768w" sizes="(max-width: 1001px) 100vw, 1001px">						
+</div>
+<style scope="scope">
+#image_334729013 {
+width: 100%;
+}
+</style>
+</div>
+</div></div>
+<div class="col medium-6 small-12 large-6"><div class="col-inner">
+<h4>Cada milissegundo extra de lentidão<br>
+pode levar a resultados negativos para o seu site.</h4>
+<p>São vários fatores que podem deixar um site mais lento. O peso total das páginas e o desempenho de servidor impactam diretamente na performance do site e podem fazer você perder posições nas buscas do Google.</p>
+<p>Com o <strong>Teste de Performance Pro</strong> você consegue acompanhar a velocidade do seu site, receber alertas e registrar as mudanças de otimização de servidor, arquivos e também de SEO.</p>
+<a href="http://pro.testedeperformance.com/register" target="_self" class="button primary is-outline" style="border-radius:99px;">
+<span>Experimente a versão gratuita</span>
+</a>
+</div></div>
+<style scope="scope">
+</style>
+</div>
+</div><!-- .section-content -->
+<style scope="scope">
+#section_768610880 {
+padding-top: 0px;
+padding-bottom: 0px;
+}
+</style>
+</section>
+<div class="is-divider divider clearfix"></div><!-- .divider -->
+<div class="is-divider divider clearfix"></div><!-- .divider -->
+<div class="is-divider divider clearfix"></div><!-- .divider -->
+<section class="section" id="section_1062190936">
+<div class="bg section-bg fill bg-fill  bg-loaded">
+</div><!-- .section-bg -->
+<div class="section-content relative">
+<div class="is-divider divider clearfix"></div><!-- .divider -->
+<div class="row" id="row-1481803389">
+<div class="col medium-8 small-12 large-8"><div class="col-inner">
+<h2>Todas as informações que você precisa em um só lugar</h2>
+<p>Vários fatores podem deixar um site mais lento. Com nossa ferramenta você consegue visualizar todas as informações sobre a saúde do seu site em um painel que pode ser usado mesmo por quem não é um especialista.</p>
+</div></div>
+</div>
+<div class="is-divider divider clearfix"></div><!-- .divider -->
+<div class="is-divider divider clearfix"></div><!-- .divider -->
+</div><!-- .section-content -->
+<style scope="scope">
+#section_1062190936 {
+padding-top: 0px;
+padding-bottom: 0px;
+background-color: rgb(250, 250, 250);
+}
+</style>
+</section>
+<section class="section img1" id="section_413276962">
+<div class="bg section-bg fill bg-fill  bg-loaded">
+</div><!-- .section-bg -->
+<div class="section-content relative">
+<div class="row" id="row-1990587773">
+<div class="col small-12 large-12"><div class="col-inner">
+<div class="img has-hover x md-x lg-x y md-y lg-y" id="image_240595537">
+<div class="img-inner dark">
+<img width="1500" height="851" src="https://www.testedeperformance.com/wp-content/uploads/2018/12/dashboard-teste-performance.png" class="attachment-original size-original" alt="" srcset="https://www.testedeperformance.com/wp-content/uploads/2018/12/dashboard-teste-performance.png 1500w, https://www.testedeperformance.com/wp-content/uploads/2018/12/dashboard-teste-performance-300x170.png 300w, https://www.testedeperformance.com/wp-content/uploads/2018/12/dashboard-teste-performance-768x436.png 768w, https://www.testedeperformance.com/wp-content/uploads/2018/12/dashboard-teste-performance-1024x581.png 1024w" sizes="(max-width: 1500px) 100vw, 1500px">						
+</div>
+<style scope="scope">
+#image_240595537 {
+width: 100%;
+}
+</style>
+</div>
+</div></div>
+</div>
+</div><!-- .section-content -->
+<style scope="scope">
+#section_413276962 {
+padding-top: 0px;
+padding-bottom: 0px;
+}
+</style>
+</section>
+<div class="is-divider divider clearfix"></div><!-- .divider -->
+<section class="section" id="section_2089613903">
+<div class="bg section-bg fill bg-fill  bg-loaded">
+</div><!-- .section-bg -->
+<div class="section-content relative">
+<div class="row" id="row-1020482840">
+<div class="col medium-4 small-12 large-4"><div class="col-inner">
+<h4>Painel de controle</h4>
+<p>Monitore em tempo real a saúde do seu site ou sistema e tenha acesso às métricas mais importantes de performance</p>
+</div></div>
+<div class="col medium-4 small-12 large-4"><div class="col-inner">
+<h4>Alertas e Notificações</h4>
+<p>Receba insights automáticos e seja notificado por email sempre que alguma métrica precisar da sua atenção.</p>
+</div></div>
+<div class="col medium-4 small-12 large-4"><div class="col-inner">
+<h4>Múltiplos Sites</h4>
+<p>Monitore múltiplas páginas e websites, e ainda compare a sua performance com a de sites concorrentes ao seu</p>
+</div></div>
+<div class="col small-12 large-12"><div class="col-inner text-center">
+<a href="http://pro.testedeperformance.com/register" target="_self" class="button primary is-outline" style="border-radius:99px;">
+<span>Experimente gratuitamente</span>
+</a>
+</div></div>
+</div>
+</div><!-- .section-content -->
+<style scope="scope">
+#section_2089613903 {
+padding-top: 0px;
+padding-bottom: 0px;
+}
+</style>
+</section>
+<div class="is-divider divider clearfix"></div><!-- .divider -->
+<section class="section" id="section_377752660">
+<div class="bg section-bg fill bg-fill  bg-loaded">
+</div><!-- .section-bg -->
+<div class="section-content relative">
+<div class="is-divider divider clearfix"></div><!-- .divider -->
+<div class="row" id="row-546601182">
+<div class="col small-12 large-12"><div class="col-inner">
+<h4 style="text-align: center;">Artigos sobre performance</h4>
+</div></div>
+<div class="col small-12 large-12"><div class="col-inner text-right">
+<div class="row large-columns-3 medium-columns- small-columns-1">
+<div class="col post-item">
+<div class="col-inner">
+<a href="https://www.testedeperformance.com/teste-de-performance/" class="plain">
+<div class="box box-normal box-text-bottom box-blog-post has-hover">
+<div class="box-image">
+<div class="image-zoom image-cover" style="padding-top:56.25%;">
+<img width="300" height="225" src="https://www.testedeperformance.com/wp-content/uploads/2019/01/conceitos-teste-de-performance-300x225.jpg" class="attachment-medium size-medium wp-post-image" alt="" srcset="https://www.testedeperformance.com/wp-content/uploads/2019/01/conceitos-teste-de-performance-300x225.jpg 300w, https://www.testedeperformance.com/wp-content/uploads/2019/01/conceitos-teste-de-performance-768x576.jpg 768w, https://www.testedeperformance.com/wp-content/uploads/2019/01/conceitos-teste-de-performance.jpg 800w" sizes="(max-width: 300px) 100vw, 300px">  							  							  						</div>
+</div><!-- .box-image -->
+<div class="box-text text-left">
+<div class="box-text-inner blog-post-inner">
+<h5 class="post-title is-large ">Entendendo seu teste de performance</h5>
+<div class="is-divider"></div>
+<p class="from_the_blog_excerpt ">Conheça termos usados nos principais testes de performance e velocidade disponíveis na web, saiba como...					</p>
+</div><!-- .box-text-inner -->
+</div><!-- .box-text -->
+</div><!-- .box -->
+</a><!-- .link -->
+</div><!-- .col-inner -->
+</div><!-- .col -->
+<div class="col post-item">
+<div class="col-inner">
+<a href="https://www.testedeperformance.com/velocidade-do-site-seo/" class="plain">
+<div class="box box-normal box-text-bottom box-blog-post has-hover">
+<div class="box-image">
+<div class="image-zoom image-cover" style="padding-top:56.25%;">
+<img width="300" height="225" src="https://www.testedeperformance.com/wp-content/uploads/2018/12/sites-rapidos-google-1-300x225.jpg" class="attachment-medium size-medium wp-post-image" alt="" srcset="https://www.testedeperformance.com/wp-content/uploads/2018/12/sites-rapidos-google-1-300x225.jpg 300w, https://www.testedeperformance.com/wp-content/uploads/2018/12/sites-rapidos-google-1-768x576.jpg 768w, https://www.testedeperformance.com/wp-content/uploads/2018/12/sites-rapidos-google-1.jpg 800w" sizes="(max-width: 300px) 100vw, 300px">  							  							  						</div>
+</div><!-- .box-image -->
+<div class="box-text text-left">
+<div class="box-text-inner blog-post-inner">
+<h5 class="post-title is-large ">Velocidade do site e SEO: Como sites são penalizados no Google</h5>
+<div class="is-divider"></div>
+<p class="from_the_blog_excerpt ">Velocidade do site é um fator considerado pelo Google? A resposta é SIM! A velocidade...					</p>
+</div><!-- .box-text-inner -->
+</div><!-- .box-text -->
+</div><!-- .box -->
+</a><!-- .link -->
+</div><!-- .col-inner -->
+</div><!-- .col -->
+<div class="col post-item">
+<div class="col-inner">
+<a href="https://www.testedeperformance.com/como-deixar-site-wordpress-rapido/" class="plain">
+<div class="box box-normal box-text-bottom box-blog-post has-hover">
+<div class="box-image">
+<div class="image-zoom image-cover" style="padding-top:56.25%;">
+<img width="300" height="225" src="https://www.testedeperformance.com/wp-content/uploads/2018/12/como-deixar-wordpress-mais-rapido-300x225.jpg" class="attachment-medium size-medium wp-post-image" alt="" srcset="https://www.testedeperformance.com/wp-content/uploads/2018/12/como-deixar-wordpress-mais-rapido-300x225.jpg 300w, https://www.testedeperformance.com/wp-content/uploads/2018/12/como-deixar-wordpress-mais-rapido-768x576.jpg 768w, https://www.testedeperformance.com/wp-content/uploads/2018/12/como-deixar-wordpress-mais-rapido.jpg 800w" sizes="(max-width: 300px) 100vw, 300px">  							  							  						</div>
+</div><!-- .box-image -->
+<div class="box-text text-left">
+<div class="box-text-inner blog-post-inner">
+<h5 class="post-title is-large ">Como deixar seu site em WordPress muito mais rápido</h5>
+<div class="is-divider"></div>
+<p class="from_the_blog_excerpt ">Um site lento para os seus usuários muitas vezes é o motivo para que você...					</p>
+</div><!-- .box-text-inner -->
+</div><!-- .box-text -->
+</div><!-- .box -->
+</a><!-- .link -->
+</div><!-- .col-inner -->
+</div><!-- .col -->
+</div>
+<a href="https://testedeperformance.com/blog" target="_self" class="button primary is-underline lowercase">
+<span>Ver todos os artigos</span>
+</a>
+</div></div>
+</div>
+</div><!-- .section-content -->
+<style scope="scope">
+#section_377752660 {
+padding-top: 0px;
+padding-bottom: 0px;
+background-color: rgb(250, 250, 250);
+}
+</style>
+</section>
 </div>
 
-<span id="conteudo"></span>  <!-- Âncora Destaques -->  
-
-<main id="trio">
-  <h2 class="destaques">
-    <a href="#conteudo">Destaques</a><!--<span><a href="#destaques_trio">-Matricula Remota...</a></span>-->
-  </h2>
-
-  <div class="outros">
-             
-    <section id="destaques_trio" class="image-mosaic">
-      
-      <article class="card">
-      <figure>
-      <a href="https://www.weldingshow.com.br/" target="_blank">
-      <img src="./paginas/destaques/WeldingShow.jpg">
-      </a>
-      <a href="https://www.weldingshow.com.br/" target="_blank">
-      <h3>Welding Show - II Feira de Equipamentos e Acessórios para Solda e Corte</h3>
-      <p>De 26 a 28 de agosto de 2025, na Fatec São Paulo. Clique para mais informações.</p>
-      </a>
-      </figure>
-      </article>
-
-      <article class="card">
-      <figure>
-      <a href="https://www.fatecsp.br/paginas/newsletter.php">
-      <img class="margin_top_15 card_80" src="./img/CapeloFatecSP-News_LOGO.png">
-      </a>
-      </figure>
-      <a href="https://www.fatecsp.br/paginas/newsletter.php">
-      <h3>📨 Inscreva-se para receber novidades!</h3>
-      </a>
-      </article>
-
-      <article class="card">
-      <figure>
-      <a href="https://sptrans.documentodoestudante.com.br/" target="_blank">
-      <img src="./paginas/destaques/SptransRevalida2025.png">
-      </a>
-      </figure>
-      </article>
-
-      <article class="card">
-      <figure>
-      <a href="https://carreiras.cps.sp.gov.br/" target="_blank">
-      <img src="./paginas/destaques/CPS-Carreiras.png">
-      </a>
-      </figure>
-      </article>
-
-      
-      
-    </section>
-  </div>
-
-</main>
-
-<main id="parte1">
-  <span id="noticias"></span>  <!-- Âncora inicial --> 
-    <h2 class="destaques">Mais Notícias</h2>
-       
-    <div class="outros"> 
-
-    <!--CARTAZES-->
-    <!--CARTAZ NA HORIZONTAL ARTICLE CLASS CARD CARD-WIDE-->
-    <!--CARTAZ NA VERTICAL ARTICLE CLASS CARD CARD-TALL-->
-    <!--INCLUIR CARTAZ HORIZONTAL NOS QUADRANTES DA ESQUERDA-->
-
-    <section id="destaques_grid" class="image-mosaic">
-    
-    
-<!-- ########################################################################################################################## -->
-<script language="javascript">
-    function abredestaque(n) {
-       link="destaques.php?not="+n;
-       window.open(link,"_blank", "menubar=0, toolbar=0, status=0, location=0, resizable=1, scrollbars=1, width=500, height=700");
-    }
+</main><!-- #main -->
+<footer id="footer" class="footer-wrapper">
+<div class="is-divider divider clearfix"></div><!-- .divider -->
+<div class="row" id="row-1885689472">
+<div class="col medium-3 small-6 large-3"><div class="col-inner">
+<h6>Teste de Performance</h6>
+<div class="gap-element" style="display:block; height:auto; padding-top:30px"></div>
+<div class="menu-teste-de-performance-container"><ul id="3" class="menu"><li id="menu-item-65" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-65"><a href="https://www.testedeperformance.com.br">Produto</a></li>
+<li id="menu-item-66" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-66"><a href="http://pro.testedeperformance.com/register">Cadastro</a></li>
+<li id="menu-item-67" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-67"><a href="http://pro.testedeperformance.com/login">Login</a></li>
+<li id="menu-item-68" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-68"><a href="#">Status</a></li>
+</ul></div>
+</div></div>
+<div class="col medium-3 small-6 large-3"><div class="col-inner">
+<h6>Legal</h6>
+<div class="gap-element" style="display:block; height:auto; padding-top:30px"></div>
+<div class="menu-legal-container"><ul id="4" class="menu"><li id="menu-item-173" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-173"><a href="https://www.testedeperformance.com/termos-de-uso/">Termos de Uso</a></li>
+<li id="menu-item-63" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-63"><a href="https://www.testedeperformance.com/termos-de-uso/">Política de Privacidade</a></li>
+<li id="menu-item-64" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-64"><a href="https://www.testedeperformance.com/termos-de-uso/">Política de Cookies</a></li>
+</ul></div>
+</div></div>
+</div>
+<div class="absolute-footer light medium-text-center text-center">
+<div class="container clearfix">
+<div class="footer-primary pull-left">
+<div class="copyright-footer">
+Copyright @2019 Homem Máquina Design e Tecnologia LTDA. Todos os Direitos Reservados      </div>
+</div><!-- .left -->
+</div><!-- .container -->
+</div><!-- .absolute-footer -->
+</footer><!-- .footer-wrapper -->
+</div><!-- #wrapper -->
+<!-- Mobile Sidebar -->
+<div id="main-menu" class="mobile-sidebar no-scrollbar mfp-hide">
+<div class="sidebar-menu no-scrollbar text-center">
+<ul class="nav nav-sidebar nav-anim nav-vertical nav-uppercase">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2 current_page_item menu-item-245"><a href="https://www.testedeperformance.com/" class="nav-top-link">Produto</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14"><a href="https://www.testedeperformance.com/planos-e-precos/" class="nav-top-link">Planos e Preços</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16"><a href="http://pro.testedeperformance.com/login" class="nav-top-link">Entrar</a></li>
+<li class="button destaque menu-item menu-item-type-custom menu-item-object-custom menu-item-17"><a href="http://pro.testedeperformance.com/register" class="nav-top-link">Experimente grátis</a></li>
+</ul>
+</div><!-- inner -->
+</div><!-- #mobile-menu -->
+<script type="text/javascript" src="https://www.testedeperformance.com/wp-content/themes/teste-de-performance-flatsome-child/assets/js/custom.js?ver=5.1.1"></script>
+<script type="text/javascript" src="https://www.testedeperformance.com/wp-content/themes/flatsome/inc/extensions/flatsome-live-search/flatsome-live-search.js?ver=3.6.1"></script>
+<script type="text/javascript" src="https://www.testedeperformance.com/wp-includes/js/hoverIntent.min.js?ver=1.8.1"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var flatsomeVars = {"ajaxurl":"https:\/\/www.testedeperformance.com\/wp-admin\/admin-ajax.php","rtl":"","sticky_height":"70","user":{"can_edit_pages":false}};
+/* ]]> */
 </script>
+<script type="text/javascript" src="https://www.testedeperformance.com/wp-content/themes/flatsome/assets/js/flatsome.js?ver=3.6.1"></script>
+<script type="text/javascript" src="https://www.testedeperformance.com/wp-includes/js/wp-embed.min.js?ver=5.1.1"></script>
 
-<article><a href="javascript:abredestaque(1598);"><h3>Colaboração em Pesquisa - Itália e Fatec-SP</h3><p>Entre os dias 16 e 20 de junho de 2025, a Fatec-SP recebeu a Dr. Neda Ghofraniha, pesquisadora italiana do Instituto de Sistemas Complexos, do Consiglio Nazionale delle Ricerche (CNR). A Dr. Ghofraniha veio ao Brasil, juntamente com um aluno de pós-doutorado, Dr. Stefano Ferreti, como parte das atividades envolvidas num projeto de pesquisa bilateral apoiado pela Fundação de Amparo à Ciência (FAPESP) e pelo CNR, coordenado no Brasil, pelo Prof. Dr. Davinson Mariano da Silva, do Departamento de Ensino Geral. </p><div class="data_post">08/07/2025</div></a></article><article><a href="https://drive.google.com/file/d/1RmIznwC3v9C_tV5Zp__p7900Qoye-6vr/view" target="_blank"><h3>GTur InForma [Ano 1, Ed. 1]</h3><p>Apresentamos a 1ª edição do informativo organizado e produzido pelos alunos de Gestão de Turismo, sob orientação do Prof. Marcos Pereira.</p><div class="data_post">15/05/2025</div></a></article><article><a href="javascript:abredestaque(1596);"><h3>Eleições para Diretor e Vice-Diretor da Fatec São Paulo</h3><p>Veja aqui a formação das Chapas e Planos de Gestão</p><div class="data_post">07/05/2025</div></a></article>
-<!-- ########################################################################################################################## -->
-         
-         <article class="last_art">
-                <a href="paginas/todosdestaques.php#destaques">
-                <p><b><span class="mais">+</span> VER MAIS</b></p>
-            </a>    
-         </article> 
-        
-      </section>  
-    </div> 
-  </main>
- 
-<main id="calendario">
-     <span id="calendario"></span>  
-     
-     <h2 class="destaques">Calendário Escolar</h2>
-     
-    <div class="outros">
-      
-      <section id="mes_corrente" class="image-mosaic">
-              <style>
-.calendario-container {
-    text-align: center;
-    margin-bottom: 20px;
-    font-family: robotolight, opensansbold, Verdana;
-}
-
-.calendario {
-    width: 100%;
-    border-collapse: collapse;
-    font-family: robotolight, opensansbold, Verdana;
-}
-
-.calendario th,
-.calendario td {
-    padding: 8px;
-    text-align: center;
-    border: 1px solid #ccc;
-}
-
-.calendario th {
-    background-color: #f2f2f2;
-    color: #333;
-}
-
-.calendario strong {
-    color: #ff0000;
-}
-
-.dia-corrente {
-    background-color: #f9d4d4;
-    box-shadow: 0 0 6px rgba(255, 0, 0, 0.5);
-}
-
-.titulo_mes {
-    font-family: "Robotolight", sans-serif;
-    font-weight: 200;
-    font-size: 22px;
-    line-height: 33px;
-    color: #005c6d;
-    padding-top: 15px;
-    padding-bottom: 5px;
-}
-</style><div class="calendario-container"><h3 class="titulo_mes">Julho 2025</h3><br><table class="calendario"><tbody><tr><th>Dom</th><th>Seg</th><th>Ter</th><th>Qua</th><th>Qui</th><th>Sex</th><th>Sab</th></tr><tr><td></td><td></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr><tr><td>6</td><td>7</td><td><div class="dia-corrente"><strong>8</strong></div></td><td>9</td><td>10</td><td>11</td><td>12</td></tr><tr><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td></tr><tr><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td></tr><tr><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td><td></td><td></td></tr></tbody></table><br><p><a href="paginas/CalendarioEscolar.pdf" target="_blank"><strong>Clique aqui para acessar o Calendário Escolar completo</strong></a></p></div>   
-          <article class="card">
-              <h3 class="center">PROGRAMAÇÃO</h3>
-
-                 
-	
-<ul><li><span>09/07</span> - 🪖 Não haverá aula - Feriado - Revolução Constitucionalista</li><li><span>14/07</span> - 📝 Classificação geral e Convocação da <b>1ª Chamada</b> no site do Vestibular</li><li><span>15/07</span> - 🧳 Término das Aulas do 1º Semestre Letivo de 2025 (Presencial e EaD)</li><li><span>15/07</span> - ⌛ <b>Prazo final</b> para <i><b>entrega de médias</b></i> finais (Presencial e EaD)</li><li><span>15/07 a 17/07</span> - 📋 <b>Matrícula</b> da 1º chamada - Vestibular</li><li><span>16/07 a 29/07</span> - 🏖️ Recesso Escolar - Presencial e EaD</li><li><span>21/07</span> - ⌛ <b>Prazo final</b> para <i><b>solicitar revisão</b></i> de notas (Art. 41 Regulamento)</li><li><span>22/07</span> - 📝 Divulgação da lista da <b>2ª Chamada - Vestibular </b></li><li><b><span>23/07 a 24/07</span> - 📋 <b>Matrícula</b> da 2ª Chamada - Vestibular</b></li><li><b><span>26/07</span> - ⌛ <b> Prazo final </b> para divulgação de <i><b>resultados de revisão de notas e erratas</b></i> (Art. 41 Regulamento) -online SIGA</b></li><li><b><span>28/07 a 01/08</span> - 📑 Período das <i><b>Inscrições</b></i> para <u>vagas remanescentes e transferências</u> (VETERANOS)</b></li><li><b><span>28/07 a 03/08</span> - 🗃️ <b>Rematrícula</b> de Alunos Veteranos (Presencial e EaD)</b></li><li><b><span>30/07</span> - 📚 Início do 2º Semestre Letivo de 2025 - Presencial e EaD</b></li><li><b><span>30/07 a 05/08</span> - 📊 Semana de Planejamento e Aperfeiçoamento Pedagógico - XVII SPAP</b></li></ul><b>           </b></article><b>
-       </b></section><b>  
-    </b></div><b>    
-  </b></main><b>     
-
-
-
-
-  <main id="parte3"> 
-      <span id="diversos"></span> <!-- Âncora -->     
-      <h2 class="destaques">Informativos</h2>
-        
-      <h5 class="inf">FATEC-SP - Formando profissionais éticos, responsáveis e inovadores!</h5>
-      
-      <div class="outros"> 
-     
-       <section id="aulas_grid">  
-         <!-- Os <article> se organizam automaticamente nas linhas, nas inclusões ou remoções... -->  
-         <article>   
-             <a href="./paginas/cursos.php" target="_self">
-               <ul class="aula">   
-                  <li>
-                      <img src="./img/cafe.jpg" height="200px" width="320" alt="21 CURSOS SUPERIORES, GRATUITOS E DE QUALIDADE!">
-                   </li><li>      
-                    <p>21 CURSOS SUPERIORES, GRATUITOS E DE QUALIDADE!</p>
-                  </li>
-                 </ul>   
-              </a>
-         </article>   
-           
-         <article>      
-           <a href="./paginas/a_fatecsp.php#infra" target="_self">
-               <ul class="aula">   
-                  <li> 
-                    <img src="./paginas/img/fatec615.jpg" height="200px" width="320" alt="INFRA-ESTRUTURA DA FATEC-SP">
-                  </li>
-                  <li> 
-                    <p>INFRA-ESTRUTURA DA FATEC-SP</p>
-                  </li>
-                  <li>
-                  Conheça o nosso espaço!    
-                  </li>
-               </ul>
-           </a>      
-         </article>
-         <article>      
-           <a href="./paginas/teams.php#conteudo" target="_self">
-               <ul class="aula">   
-                  <li> 
-                    <img id="img_teams" src="./img/teams_logo.jpg" height="200px" width="320" alt="MS-TEAMS">
-                  </li><li> 
-                    <p>MICROSOFT-TEAMS</p>
-                  </li><li>        
-                    Login, Treinamentos e Tutoriais
-                  </li>
-               </ul>
-           </a>      
-         </article>    
-         <article>      
-           <a href="./paginas/email_gov.php#conteudo" target="_self">
-               <ul class="aula">   
-                  <li> 
-                    <img src="./img/outlook1.png" height="200px" width="320" alt="Portal Micro-Soft">
-                  </li><li> 
-                    <p>E-MAIL MICROSOFT</p>
-                  </li><li>        
-                    Suporte: f002.email@fatec.sp.gov.br
-                  </li>
-               </ul>
-           </a>      
-         </article> 
-         <article>
-            <a href="./paginas/tecnologo.php" target="_self">
-               <ul class="aula">  
-                  <li> 
-                    <img style="object-position: left;" src="./img/tas_marcelo2.jpg" height="200px" width="320" alt="MARCELO TAS: QUEM QUER SER TECNÓLOGO?">
-                  </li><li>
-                     <p>QUEM QUER SER TECNÓLOGO?</p> 
-                   </li><li>
-                     Por: Marcelo Tas
-                   </li>
-               </ul>
-            </a>
-         </article>
-         <article> 
-            <a href="./paginas/MapaCampus.pdf" target="_blank">
-               <ul class="aula">    
-                  <li> 
-                    <img src="./paginas/img/mapa_campus.jpg" height="200px" width="320" alt="MAPA DO CAMPUS">
-                  </li><li>
-                    <p>MAPA DO CAMPUS</p>
-                  </li><li>
-                    Fatec São Paulo
-                  </li>   
-               </ul>
-            </a>    
-         </article> 
-         <article>      
-           <a href="https://emec.mec.gov.br/emec/consulta-cadastro/detalhamento/d96957f455f6405d14c6542552b0f6eb/MzQ=" target="_blank">
-               <ul class="aula">   
-                  <li> 
-                    <img src="./img/banner_qrcode_emec.png" height="200px" width="320" alt="ACERVO">
-                  </li><li> 
-                    <p>Consulte aqui o cadastro da instituição<br>no sistema e-MEC</p>
-                  </li>
-               </ul>
-           </a>      
-         </article>    
-         <article>
-            <a href="paginas/achados_perdidos.pdf" target="_blank">     
-              <ul class="aula">   
-                  <li>  
-                <img src="./paginas/img/achados_perdidos.jpg" height="200px" width="320" alt="ACHADOS &amp; PERDIDOS" title="">
-                  </li><li>
-                  <p>ACHADOS &amp; PERDIDOS</p>
-                  </li><li>    
-                  E-mail: protocol@fatecsp.br (Regina)
-                  </li>
-                </ul>   
-            </a> 
-         </article>
-           
-      </section>       
-   </div>     
-  </main>    
-  <!-- **** PARALAXE (Só texto, imagem omitida no CSS.) *** -->   
-  <div id="parallax">
-      <article>   
-        <p class="center">
-          FATEC-SP<br>    
-          Ao lado do Metrô Tiradentes!
-        </p>
-      </article>   
-  </div>  
-  <!-- *** MAPA, só na HOME *** -->     
-  <div id="mapa"> 
-     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.0858575738907!2d-46.63454918502961!3d-23.529414184698762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce585f8b81eb75%3A0xb742158dee17d684!2sFaculdade+de+Tecnologia+de+S%C3%A3o+Paulo!5e0!3m2!1spt-BR!2sbr!4v1515666018361" width="600" height="450" frameborder="0" style="border:0" allowfullscreen=""></iframe>     
-  </div> 
-     
-  <!-- *** INÍCIO DO RODAPÉ *** -->   
-
-  <footer id="id_info">         
-     <div class="voltar">
-       <a href="#topo"><img src="./img/seta_inicio.png" width="22"></a>
-     </div>  
-     <div id="logos_flex">
-         <figure id="logo1">
-            <a href="./index.php" target="_self">
-                <img src="./img/logofatec2.png" alt="Fatec-SP" title="Fatec-SP">
-                <span>Superior em  Tecnologia!</span>
-            </a>
-         </figure>
-         <!--div id="slogan_header">
-            <h3>Faculdade de Tecnologia de São Paulo</h3>
-            <p class="mens_rodape">Educação Profissional Pública, Superior e de Excelência!</p><p>
-               <a class="cor_link" href="./paginas/fale_conosco.php"><img src="./img/telefone.png" width="17" /> Fale conosco...</a>
-            </p> 
-         </div-->
-         <div id="slogan">
-            <h3>Faculdade de Tecnologia de São Paulo<br>
-                  Educação Profissional Pública<br> Superior e de Excelência!
-            </h3>
-            <p>
-               <a class="cor_link" href="./paginas/fale_conosco.php">
-                   <img src="./img/telefone.png" width="17">Fale conosco...
-               </a>
-            </p>
-         </div>
-         <article class="endereco">
-            <p>Pça. Coronel Fernando Prestes, 30 <br> (Entrada pela Av. Tiradentes, 615)<br>
-            Bom Retiro - São Paulo-SP - CEP 01124-060</p>  
-         </article>  
-     </div>  
-    <div id="copy">
-        <p>© Copyright: Fatec-SP</p>
-    </div> 
-   </footer>
-  </b></div><b> 
-     <script src="./js/menu1.js"></script> 
-     <!--<script src="./js/home.js"></script>-->
- 
-
-</b></body></html>
+</body></html>
