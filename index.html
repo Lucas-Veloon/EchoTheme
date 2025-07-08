@@ -1,43 +1,54 @@
-<!-- index.html -->
+<!-- widget.html -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Site Principal</title>
+  <meta charset="UTF-8" />
+  <title>Enviando tema</title>
   <style>
     body {
       font-family: sans-serif;
       padding: 20px;
-      transition: background 0.3s, color 0.3s;
     }
-
-    body.dark {
-      background-color: #121212;
-      color: white;
-    }
-
-    iframe {
-      width: 100%;
-      height: 150px;
-      border: 1px solid #ccc;
-      margin-top: 20px;
+    button {
+      padding: 8px 16px;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
-  <h1>Site Principal</h1>
-  <p>Abaixo está o iframe com o widget carregado:</p>
-
-  <!-- Altere para light ou dark -->
-  <iframe src="widget.html"></iframe>
+  <p>Enviando tema para o site pai...</p>
+  <button id="toggleThemeBtn">Mudar para Light</button>
 
   <script>
-    window.addEventListener('message', (event) => {
-      if (event.data.theme === 'dark') {
-        document.body.classList.add('dark');
-      } else if (event.data.theme === 'light') {
-        document.body.classList.remove('dark');
+    // Inicializa tema pelo parâmetro da URL (default dark)
+    const params = new URLSearchParams(window.location.search);
+    let theme = params.get('theme') || 'dark';
+
+    const btn = document.getElementById('toggleThemeBtn');
+
+    // Função para enviar a mensagem para o site pai
+    function sendTheme(theme) {
+      window.parent.postMessage({ theme }, '*');
+    }
+
+    // Atualiza texto do botão conforme o tema atual
+    function updateButtonText() {
+      if (theme === 'dark') {
+        btn.textContent = 'Mudar para Light';
+      } else {
+        btn.textContent = 'Mudar para Dark';
       }
+    }
+
+    // Envia o tema inicial ao carregar
+    sendTheme(theme);
+    updateButtonText();
+
+    // Botão alterna tema
+    btn.addEventListener('click', () => {
+      theme = theme === 'dark' ? 'light' : 'dark';
+      sendTheme(theme);
+      updateButtonText();
     });
   </script>
 </body>
