@@ -1,55 +1,723 @@
-<!-- widget.html -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <title>Enviando tema</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      padding: 20px;
-    }
-    button {
-      padding: 8px 16px;
-      cursor: pointer;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalizador de Tema - Echo Theme</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4361ee;
+            --secondary: #3f37c9;
+            --dark: #1d3557;
+            --light: #f8f9fa;
+            --text: #333333;
+            --background: #ffffff;
+            --card-bg: #f8f9fa;
+            --header-bg: #ffffff;
+            --footer-bg: #1d3557;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --border-radius: 8px;
+            --transition: all 0.3s ease;
+        }
+
+        .dark-theme {
+            --primary: #4895ef;
+            --secondary: #3a0ca3;
+            --dark: #f8f9fa;
+            --light: #1d3557;
+            --text: #f8f9fa;
+            --background: #121212;
+            --card-bg: #1e1e1e;
+            --header-bg: #121212;
+            --footer-bg: #0d1b2a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: var(--transition);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: var(--header-bg);
+            box-shadow: var(--shadow);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo i {
+            margin-right: 0.5rem;
+        }
+
+        .theme-toggle {
+            background: var(--card-bg);
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow);
+        }
+
+        .main-content {
+            display: flex;
+            flex: 1;
+            padding: 2rem 0;
+            gap: 2rem;
+        }
+
+        .theme-controls {
+            flex: 1;
+            padding: 2rem;
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            max-width: 350px;
+        }
+
+        .preview-container {
+            flex: 2;
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .preview-title {
+            margin-bottom: 1rem;
+            color: var(--primary);
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 0.5rem;
+        }
+
+        .iframe-wrapper {
+            flex: 1;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            border: 1px solid var(--light);
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .section-title {
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 0.5rem;
+        }
+
+        .color-picker-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .color-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .color-input {
+            width: 100%;
+            height: 40px;
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+        }
+
+        .preset-themes {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .theme-btn {
+            padding: 0.8rem;
+            border: none;
+            border-radius: var(--border-radius);
+            background: var(--card-bg);
+            cursor: pointer;
+            font-weight: 600;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .theme-btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .theme-btn.blue {
+            background: linear-gradient(135deg, #4361ee, #3a0ca3);
+            color: white;
+        }
+
+        .theme-btn.green {
+            background: linear-gradient(135deg, #4caf50, #2e7d32);
+            color: white;
+        }
+
+        .theme-btn.dark {
+            background: linear-gradient(135deg, #121212, #0d1b2a);
+            color: white;
+        }
+
+        .theme-btn.purple {
+            background: linear-gradient(135deg, #9c27b0, #7b1fa2);
+            color: white;
+        }
+
+        footer {
+            background-color: var(--footer-bg);
+            color: white;
+            padding: 2rem 0;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .instructions {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .instructions h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .instructions ol {
+            padding-left: 1.5rem;
+        }
+
+        .instructions li {
+            margin-bottom: 0.8rem;
+        }
+
+        .code-block {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 4px;
+            font-family: monospace;
+            margin: 1rem 0;
+            overflow-x: auto;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+            
+            .theme-controls {
+                max-width: 100%;
+            }
+            
+            .preset-themes {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    </style>
 </head>
 <body>
-  <p>Enviando tema para o site pai...</p>
-  <button id="toggleThemeBtn">Mudar para Light</button>
-
-  <script>
-    // Inicializa tema pelo parâmetro da URL (default dark)
-    const params = new URLSearchParams(window.location.search);
-    let theme = params.get('theme') || 'dark';
-
-    const btn = document.getElementById('toggleThemeBtn');
-
-    // Função para enviar a mensagem para o site pai
-    function sendTheme(theme) {
-      window.parent.postMessage({ theme }, '*');
-    }
-
-    // Atualiza texto do botão conforme o tema atual
-    function updateButtonText() {
-      if (theme === 'dark') {
-        btn.textContent = 'Mudar para Light';
-      } else {
-        btn.textContent = 'Mudar para Dark';
-      }
-    }
-
-    // Envia o tema inicial ao carregar
-    sendTheme(theme);
-    updateButtonText();
-
-    // Botão alterna tema
-    btn.addEventListener('click', () => {
-      theme = theme === 'dark' ? 'light' : 'dark';
-      sendTheme(theme);
-      updateButtonText();
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">
+                    <i class="fas fa-palette"></i>
+                    EchoTheme Editor
+                </a>
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    
+    <main class="container">
+        <div class="main-content">
+            <div class="theme-controls">
+                <h2 class="section-title">Personalize seu tema</h2>
+                
+                <div class="color-picker-group">
+                    <label class="color-label">Cor Primária</label>
+                    <input type="color" class="color-input" id="primaryColor" value="#4361ee">
+                </div>
+                
+                <div class="color-picker-group">
+                    <label class="color-label">Cor Secundária</label>
+                    <input type="color" class="color-input" id="secondaryColor" value="#3f37c9">
+                </div>
+                
+                <div class="color-picker-group">
+                    <label class="color-label">Cor de Fundo</label>
+                    <input type="color" class="color-input" id="backgroundColor" value="#ffffff">
+                </div>
+                
+                <div class="color-picker-group">
+                    <label class="color-label">Cor do Texto</label>
+                    <input type="color" class="color-input" id="textColor" value="#333333">
+                </div>
+                
+                <h3 class="section-title">Temas Pré-definidos</h3>
+                <div class="preset-themes">
+                    <button class="theme-btn blue" data-theme="blue">Azul</button>
+                    <button class="theme-btn green" data-theme="green">Verde</button>
+                    <button class="theme-btn dark" data-theme="dark">Escuro</button>
+                    <button class="theme-btn purple" data-theme="purple">Roxo</button>
+                </div>
+            </div>
+            
+            <div class="preview-container">
+                <h2 class="preview-title">Pré-visualização do Tema</h2>
+                <div class="iframe-wrapper">
+                    <iframe id="themePreview" src="about:blank"></iframe>
+                </div>
+            </div>
+        </div>
+        
+        <div class="instructions">
+            <h3>Como Implementar no Seu Site Original</h3>
+            <ol>
+                <li>Adicione este código ao seu site original para receber as alterações de tema:</li>
+                <div class="code-block">
+// Verificar se estamos no site original (não no iframe)
+if (window === window.parent) {
+    window.addEventListener('message', (event) => {
+        // Verificar a origem da mensagem para segurança
+        if (event.origin !== 'https://seu-dominio.com') return;
+        
+        const themeData = event.data;
+        
+        // Aplicar o tema
+        if (themeData.action === 'changeTheme') {
+            // Atualizar variáveis CSS
+            document.documentElement.style.setProperty('--primary', themeData.primary);
+            document.documentElement.style.setProperty('--secondary', themeData.secondary);
+            document.documentElement.style.setProperty('--background', themeData.background);
+            document.documentElement.style.setProperty('--text', themeData.text);
+            
+            // Salvar no localStorage para persistência
+            localStorage.setItem('siteTheme', JSON.stringify(themeData));
+        }
     });
-  </script>
+    
+    // Carregar tema salvo, se existir
+    const savedTheme = localStorage.getItem('siteTheme');
+    if (savedTheme) {
+        const themeData = JSON.parse(savedTheme);
+        document.documentElement.style.setProperty('--primary', themeData.primary);
+        document.documentElement.style.setProperty('--secondary', themeData.secondary);
+        document.documentElement.style.setProperty('--background', themeData.background);
+        document.documentElement.style.setProperty('--text', themeData.text);
+    }
+}
+                </div>
+                <li>Substitua 'https://seu-dominio.com' pelo domínio do seu painel de controle</li>
+                <li>Certifique-se de que seu site usa variáveis CSS para as cores principais</li>
+                <li>O painel de controle enviará as novas cores para seu site através de postMessage</li>
+            </ol>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>© 2023 EchoTheme Editor - Ferramenta de Personalização de Tema</p>
+                <div>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Configurações iniciais
+        const iframe = document.getElementById('themePreview');
+        const primaryColorInput = document.getElementById('primaryColor');
+        const secondaryColorInput = document.getElementById('secondaryColor');
+        const backgroundColorInput = document.getElementById('backgroundColor');
+        const textColorInput = document.getElementById('textColor');
+        const themeToggle = document.getElementById('themeToggle');
+        
+        // Gerar HTML para o iframe de pré-visualização
+        const previewHTML = `
+            <!DOCTYPE html>
+            <html lang="pt-BR">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Pré-visualização de Tema</title>
+                <style>
+                    :root {
+                        --primary: #4361ee;
+                        --secondary: #3f37c9;
+                        --background: #ffffff;
+                        --text: #333333;
+                    }
+                    
+                    body {
+                        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                        margin: 0;
+                        padding: 2rem;
+                        background-color: var(--background);
+                        color: var(--text);
+                        transition: all 0.3s ease;
+                    }
+                    
+                    .preview-header {
+                        text-align: center;
+                        margin-bottom: 2rem;
+                    }
+                    
+                    .preview-title {
+                        color: var(--primary);
+                        font-size: 2rem;
+                        margin-bottom: 1rem;
+                    }
+                    
+                    .preview-subtitle {
+                        color: var(--secondary);
+                        font-size: 1.2rem;
+                    }
+                    
+                    .theme-demo {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 1.5rem;
+                        justify-content: center;
+                    }
+                    
+                    .demo-card {
+                        background: white;
+                        border-radius: 8px;
+                        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                        overflow: hidden;
+                        width: 250px;
+                    }
+                    
+                    .card-header {
+                        background: var(--primary);
+                        color: white;
+                        padding: 1rem;
+                        text-align: center;
+                    }
+                    
+                    .card-body {
+                        padding: 1.5rem;
+                    }
+                    
+                    .color-box {
+                        display: flex;
+                        margin-bottom: 1rem;
+                    }
+                    
+                    .color-swatch {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 4px;
+                        margin-right: 1rem;
+                    }
+                    
+                    .primary-swatch { background: var(--primary); }
+                    .secondary-swatch { background: var(--secondary); }
+                    .bg-swatch { background: var(--background); }
+                    .text-swatch { 
+                        background: var(--text);
+                        color: white;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 12px;
+                    }
+                    
+                    .color-info {
+                        flex: 1;
+                    }
+                    
+                    .color-name {
+                        font-weight: bold;
+                        margin-bottom: 0.3rem;
+                    }
+                    
+                    .color-value {
+                        font-family: monospace;
+                        font-size: 0.9rem;
+                    }
+                    
+                    .btn {
+                        display: inline-block;
+                        padding: 0.6rem 1.2rem;
+                        background: var(--primary);
+                        color: white;
+                        border-radius: 4px;
+                        text-decoration: none;
+                        font-weight: 600;
+                        margin-top: 1rem;
+                    }
+                    
+                    .btn:hover {
+                        background: var(--secondary);
+                    }
+                </style>
+            </head>
+            <body>
+                <div class="preview-header">
+                    <h1 class="preview-title">Demonstração de Tema</h1>
+                    <p class="preview-subtitle">Pré-visualização das cores selecionadas</p>
+                </div>
+                
+                <div class="theme-demo">
+                    <div class="demo-card">
+                        <div class="card-header">
+                            <h3>Cores do Tema</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="color-box">
+                                <div class="color-swatch primary-swatch"></div>
+                                <div class="color-info">
+                                    <div class="color-name">Primária</div>
+                                    <div class="color-value" id="primary-value">#4361ee</div>
+                                </div>
+                            </div>
+                            
+                            <div class="color-box">
+                                <div class="color-swatch secondary-swatch"></div>
+                                <div class="color-info">
+                                    <div class="color-name">Secundária</div>
+                                    <div class="color-value" id="secondary-value">#3f37c9</div>
+                                </div>
+                            </div>
+                            
+                            <div class="color-box">
+                                <div class="color-swatch bg-swatch"></div>
+                                <div class="color-info">
+                                    <div class="color-name">Fundo</div>
+                                    <div class="color-value" id="background-value">#ffffff</div>
+                                </div>
+                            </div>
+                            
+                            <div class="color-box">
+                                <div class="color-swatch text-swatch">Aa</div>
+                                <div class="color-info">
+                                    <div class="color-name">Texto</div>
+                                    <div class="color-value" id="text-value">#333333</div>
+                                </div>
+                            </div>
+                            
+                            <a href="#" class="btn">Botão de Exemplo</a>
+                        </div>
+                    </div>
+                    
+                    <div class="demo-card">
+                        <div class="card-header">
+                            <h3>Texto de Exemplo</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Este é um parágrafo demonstrativo com o texto no tema selecionado. O fundo e as cores de texto podem ser personalizados.</p>
+                            
+                            <h4 style="color: var(--primary);">Título Secundário</h4>
+                            <p>Outro parágrafo para demonstrar a combinação de cores.</p>
+                            
+                            <ul>
+                                <li>Item de lista 1</li>
+                                <li>Item de lista 2</li>
+                                <li>Item de lista 3</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <script>
+                    // Função para atualizar o tema na pré-visualização
+                    function updatePreviewTheme(themeData) {
+                        document.documentElement.style.setProperty('--primary', themeData.primary);
+                        document.documentElement.style.setProperty('--secondary', themeData.secondary);
+                        document.documentElement.style.setProperty('--background', themeData.background);
+                        document.documentElement.style.setProperty('--text', themeData.text);
+                        
+                        // Atualizar os valores exibidos
+                        document.getElementById('primary-value').textContent = themeData.primary;
+                        document.getElementById('secondary-value').textContent = themeData.secondary;
+                        document.getElementById('background-value').textContent = themeData.background;
+                        document.getElementById('text-value').textContent = themeData.text;
+                    }
+                    
+                    // Escutar mensagens do painel de controle
+                    window.addEventListener('message', (event) => {
+                        if (event.data.action === 'updatePreview') {
+                            updatePreviewTheme(event.data.theme);
+                        }
+                    });
+                <\/script>
+            </body>
+            </html>
+        `;
+        
+        // Inicializar o iframe
+        iframe.contentDocument.open();
+        iframe.contentDocument.write(previewHTML);
+        iframe.contentDocument.close();
+        
+        // Função para atualizar a pré-visualização
+        function updatePreview() {
+            const themeData = {
+                primary: primaryColorInput.value,
+                secondary: secondaryColorInput.value,
+                background: backgroundColorInput.value,
+                text: textColorInput.value
+            };
+            
+            // Enviar mensagem para o iframe
+            iframe.contentWindow.postMessage({
+                action: 'updatePreview',
+                theme: themeData
+            }, '*');
+        }
+        
+        // Função para aplicar tema no site original
+        function applyThemeToOriginal() {
+            const themeData = {
+                primary: primaryColorInput.value,
+                secondary: secondaryColorInput.value,
+                background: backgroundColorInput.value,
+                text: textColorInput.value
+            };
+            
+            // Em um cenário real, substitua '*' pelo domínio do seu site
+            window.parent.postMessage({
+                action: 'changeTheme',
+                ...themeData
+            }, '*');
+        }
+        
+        // Event listeners
+        primaryColorInput.addEventListener('input', function() {
+            updatePreview();
+            applyThemeToOriginal();
+        });
+        
+        secondaryColorInput.addEventListener('input', function() {
+            updatePreview();
+            applyThemeToOriginal();
+        });
+        
+        backgroundColorInput.addEventListener('input', function() {
+            updatePreview();
+            applyThemeToOriginal();
+        });
+        
+        textColorInput.addEventListener('input', function() {
+            updatePreview();
+            applyThemeToOriginal();
+        });
+        
+        // Temas pré-definidos
+        document.querySelectorAll('.theme-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const theme = this.dataset.theme;
+                
+                switch(theme) {
+                    case 'blue':
+                        primaryColorInput.value = '#4361ee';
+                        secondaryColorInput.value = '#3f37c9';
+                        backgroundColorInput.value = '#ffffff';
+                        textColorInput.value = '#333333';
+                        break;
+                    case 'green':
+                        primaryColorInput.value = '#4caf50';
+                        secondaryColorInput.value = '#2e7d32';
+                        backgroundColorInput.value = '#f8fff0';
+                        textColorInput.value = '#263238';
+                        break;
+                    case 'dark':
+                        primaryColorInput.value = '#4895ef';
+                        secondaryColorInput.value = '#3a0ca3';
+                        backgroundColorInput.value = '#121212';
+                        textColorInput.value = '#f8f9fa';
+                        break;
+                    case 'purple':
+                        primaryColorInput.value = '#9c27b0';
+                        secondaryColorInput.value = '#7b1fa2';
+                        backgroundColorInput.value = '#f3e5f5';
+                        textColorInput.value = '#4a0072';
+                        break;
+                }
+                
+                updatePreview();
+                applyThemeToOriginal();
+            });
+        });
+        
+        // Alternar tema claro/escuro
+        themeToggle.addEventListener('click', function() {
+            document.body.classList.toggle('dark-theme');
+            const icon = this.querySelector('i');
+            
+            if (document.body.classList.contains('dark-theme')) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        });
+        
+        // Inicializar
+        updatePreview();
+    </script>
 </body>
 </html>
